@@ -1,6 +1,7 @@
 const env = require('./env.js')
 const config = require('./apiConfig.js')[env];
 const bearerToken = config.bearer_token;
+
 export async function getAllMovies() {
   try {
     console.log(config.API_URL);
