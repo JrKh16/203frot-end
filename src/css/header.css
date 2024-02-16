@@ -1,0 +1,44 @@
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the logo container takes up the full height of the Navbar */
+  }
+  
+  .logo {
+    cursor: pointer;
+    text-align: center; /* Center the text within the logo div */
+    margin-left: 700px;
+  }
+  
+  .logo h3,
+  .logo h6 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-line {
+    background-color: lime; /* Change the background color to lime */
+  }
+*{
+    margin-bottom: 10px;
+}
+.movies-count{
+  margin-right: 150px;
+  margin-top: 7px;
+}
+.search-input {
+  border-radius: 10px; /* Adjust the border radius as needed */
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the right position as needed */
+  transform: translateY(-50%);
+  color: black; /* Adjust the color of the icon */
+  margin-right: 100px;
+}
+
+.search-input {
+  padding-right: 30px; /* Adjust the padding to make space for the icon */
+}

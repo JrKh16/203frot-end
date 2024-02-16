@@ -1,36 +1,19 @@
 import React, { useState, useEffect } from "react";
-import "../css/moviecard.css";
-import { fetchImageWithToken } from "../service/apiUtils";
+import "../css/card.css";
+import "../css/components.css";
 
 
 const MovieCard = (props) => {
-  const [imageBlob, setImageBlob] = useState(null);
-
-  useEffect(() => {
-    const imagePath = props.Image_name;
-    
-    fetchImageWithToken(imagePath)
-      .then(blob => setImageBlob(blob))
-      .catch(error => console.error(error));
-  }, [props.Image_name]);
-
-
   return (
-    <div className="card movie_card">
-      {imageBlob && (
-        <img
-          src={URL.createObjectURL(imageBlob)}
-          alt={`Movie poster for ${props.title}`}
-          className="card-img-top"
-        />
-      )}
       <div className="card-body">
-        <h5 className="card-title">{props.title}</h5>
-        <p className="card-text">{props.genre}</p>
-        <span className="card-text">{props.director}</span>
-        <p className="card-text float-right">{props.release_year}</p>
+        <h5 className="card-title">Name: {props.title}</h5>
+        <p className="card-text">genre: {props.genre}</p>
+        <p className="card-text">director:{props.director}</p>
+        <p className="card-text">year: {props.release_year}</p>
+        <div className="out-more">
+        <a name="more-movies"class="btn btn-warning more"href="#"role="button">More</a>
+        </div>
       </div>
-    </div>
   );
 };
 
