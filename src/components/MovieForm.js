@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Modal,Button,Form,Image,Container,Row,Col,} from "react-bootstrap";
+import {Modal,Button,Form,Container,Row,Col,} from "react-bootstrap";
 
 const MovieFormModal = ({
   onChangeForm,
@@ -11,7 +11,6 @@ const MovieFormModal = ({
   const [genre, setGenre] = useState("");
   const [director, setDirector] = useState("");
   const [releaseYear, setReleaseYear] = useState("");
-  const [image, setImage] = useState(null);
 
   const currentYear = new Date().getFullYear();
   const numberOfYearsInPast = 50; // Change this value as needed
@@ -28,7 +27,6 @@ const MovieFormModal = ({
       setGenre("");
       setDirector("");
       setReleaseYear("");
-      setImage(null);
 
       // Close the modal
       handleClose();
@@ -41,7 +39,6 @@ const MovieFormModal = ({
     setGenre("");
     setDirector("");
     setReleaseYear("");
-    setImage(null);
   };
 
   return (
